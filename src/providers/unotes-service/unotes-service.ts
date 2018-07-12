@@ -9,12 +9,16 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class UnotesServiceProvider {
-
+  UrlApi = 'http://localhost:4000/UNotes/UNotes.php?';
   constructor(public http: HttpClient) {
     
   }
 
-  getUsers() {
-    return this.http.get('http://sistemacobros.000webhostapp.com/UNotes.php?Peticion=Cons_Usuarios&Email=brayan042864gmail.com');
+  ValidarUsuario(Email,Clave) {
+    return this.http.get(`${this.UrlApi}Peticion=Cons_Usuarios&Email=${Email}&Clave=${Clave}`);
+  }
+
+  RegistrarUsuario(Nombre,Email,Clave){
+    return this.http.get(`${this.UrlApi}Peticion=Insertar_Usuario&Nombre=${Nombre}&Email=${Email}&Clave=${Clave}`);
   }
 }

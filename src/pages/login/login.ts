@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AlertController } from 'ionic-angular';
 import { UnotesServiceProvider } from '../../providers/unotes-service/unotes-service';
 import { UnotesUtilidadesProvider } from '../../providers/unotes-utilidades/unotes-utilidades';
 import { PeriodosPage } from '../periodos/periodos';
@@ -13,9 +12,7 @@ import { RegistroPage } from '../registro/registro';
 export class LoginPage {
   email:String = '';
   clave:String = '';
-
   constructor(public navCtrl: NavController,
-              public alertCtrl: AlertController,
               public UNotesService: UnotesServiceProvider,
               public Utilidades:UnotesUtilidadesProvider) {
 
@@ -30,13 +27,15 @@ export class LoginPage {
       this.Utilidades.mostrarAlerta('Error','Debe ingresar la clave');
       return;
     }
-    this.UNotesService.getUsers()
+    this.UNotesService.ValidarUsuario(this.email.trim(),this.clave.trim())
     .subscribe(
       (data) => {
-        if(data["Resultado"] == true){
-          alert('Ok');
-          this.navCtrl.setRoot(RegistroPage);
-        } 
+        console.log(data);
+        if(data[0]["Result"] == "True"){
+          this.navCtrl.setRoot(PeriodosPage,{Id:data[0]["Id"],Nombre:data[0]["Nombre"]});
+        }else{
+          this.Utilidades.mostrarAlerta('Error',data[0]["Msn"]);
+        }
       },
       (error) =>{
         console.error(error);
