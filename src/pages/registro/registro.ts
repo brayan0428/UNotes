@@ -44,35 +44,31 @@ export class RegistroPage {
       this.Utilidades.mostrarAlerta('Error','Las claves no coinciden');
       return;
     }
-    //Valido si ya existe un usuario con ese correo
-    let ExisteUsu:boolean = false;
+    //Valido si ya existe un usuario con ese correo ;
     this.UNotesService.ValidarUsuario(this.email.trim(),'')
     .subscribe(
       (data) => {
-        if(data[0]["Result"] == "True"){
-          ExisteUsu = true;
-        }
-      },
-      (error) =>{console.error(error);}
-    ) 
-    if(ExisteUsu = true){
-      this.Utilidades.mostrarAlerta('Error','Ya existe un usuario registrado con ese correo');
-      return;
-    }
-    //Ingreso el usuario
-    this.UNotesService.RegistrarUsuario(this.nombre.trim(),this.email.trim(),this.clave.trim())
-    .subscribe(
-      (data) => {
-        console.log(data);
-        if(data[0]["Result"] == "True"){
-          this.Utilidades.mostrarAlerta('Confirmación','Usuario Creado Exitosamente');
-          this.navCtrl.setRoot(LoginPage);
+        if(String(data[0]["Result"]) == "True"){
+          this.Utilidades.mostrarAlerta('Error','Ya existe un usuario registrado con ese correo');
         }else{
-          this.Utilidades.mostrarAlerta('Error',data[0]["Msn"]);
+          //Ingreso el usuario
+          this.UNotesService.RegistrarUsuario(this.nombre.trim(),this.email.trim(),this.clave.trim())
+          .subscribe(
+            (data) => {
+              console.log(data);
+              if(data[0]["Result"] == "True"){
+                this.Utilidades.mostrarAlerta('Confirmación','Usuario Creado Exitosamente');
+                this.navCtrl.setRoot(LoginPage);
+              }else{
+                this.Utilidades.mostrarAlerta('Error',data[0]["Msn"]);
+              }
+            },
+            (error) =>{console.error(error);}
+          ) 
         }
       },
       (error) =>{console.error(error);}
-    ) 
+    )
   }
 
   retornarLogin(){

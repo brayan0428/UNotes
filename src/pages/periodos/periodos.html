@@ -8,6 +8,18 @@
   </ion-header>
   
   <ion-content>
-    <h1>Periodos</h1>
-    <p>Esta es la pagina de periodos</p>
+    <ion-card *ngFor="let i of Periodos">
+      <ion-card-header>
+        {{i.Nombre}}
+      </ion-card-header>
+      <ion-card-content>
+          <p>{{i.Descripcion}}</p>
+          <p>{{i.CantMaterias}} Materias</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-fab bottom right class="float_action_periodos">
+      <button ion-fab>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-fab>
   </ion-content>

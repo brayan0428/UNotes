@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class UnotesServiceProvider {
-  UrlApi = 'http://localhost:4000/UNotes/UNotes.php?';
+  UrlApi = 'http://localhost:8080/UNotes/UNotes.php?';
   constructor(public http: HttpClient) {
     
   }
@@ -20,5 +20,9 @@ export class UnotesServiceProvider {
 
   RegistrarUsuario(Nombre,Email,Clave){
     return this.http.get(`${this.UrlApi}Peticion=Insertar_Usuario&Nombre=${Nombre}&Email=${Email}&Clave=${Clave}`);
+  }
+
+  ConsultarPeriodos(IdEst){
+    return this.http.get(`${this.UrlApi}Peticion=Cons_Periodos&IdEst=${IdEst}`);
   }
 }

@@ -51,6 +51,20 @@ class WebService extends Con {
 			return '[{"Result":"False", "Msn": "Se presento un error al momento de guardar"}]';
 		}
 	}
+
+	public function Cons_Periodos($IdEst){
+		try{
+			$Consulta= "select Nombre,Descripcion,'5' as CantMaterias from periodos where IdEst=".$IdEst." and Habilitado=1";
+			$resultado = $this->mysqli->query($Consulta);
+			$resultado->data_seek(0);
+			while( $fila = $resultado->fetch_assoc() ){
+				$data[] = $fila;
+			}
+			return json_encode($data);	
+		}catch (Exception $e) {
+			echo $e->getMessage();
+		}
+    }
 }
 
 $WebService = new WebService();
@@ -64,4 +78,8 @@ if($Peticion == "Insertar_Usuario"){
     $Email = $_GET['Email'];
     $Clave = $_GET['Clave'];
 	echo $WebService->Insertar_Usuario($Nombre,$Email,$Clave);
+}
+if($Peticion == "Cons_Periodos"){
+    $IdEst = $_GET['IdEst'];
+	echo $WebService->Cons_Periodos($IdEst);
 }
