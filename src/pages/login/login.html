@@ -2,16 +2,15 @@
   <div style="width: 100%;height: 50px;background: #0288D1"></div>
 </ion-header>
 
-<ion-content padding>
-  <ion-card class="card_login">
+<ion-content class="content_main" padding>
+  <ion-card center class="card_login">
     <ion-card-header class="img_logo">
-      Login UNotes
-        <!--<ion-img width="80%" height="100" class="logo-login" src="../../assets/imgs/logoUNotes_full.png"></ion-img>-->
+        <ion-img class="logo_login" src="../../assets/imgs/LogoUNotes_Full.png"></ion-img>
     </ion-card-header>
     <ion-card-content>
       <ion-item>
         <ion-label floating><ion-icon name="md-person" class="icon_login"></ion-icon>  Email</ion-label>
-        <ion-input type="text" [(ngModel)]="email"></ion-input>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
       </ion-item>
       <ion-item class="input_margin">
         <ion-label floating><ion-icon name="md-key" class="icon_login"></ion-icon>  Clave</ion-label>

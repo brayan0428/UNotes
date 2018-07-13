@@ -3,17 +3,22 @@ page-login {
 }
 $colorPrimario: #0288D1;
 .card_login{
-    margin-top: 20%;
-    border: 3px solid;
+    border: 2px solid;
     border-radius: 25px;
     border-color:$colorPrimario;
+}
+.content_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .img_logo{
     text-align: center;
 }
 .logo_login{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 80px;
+    background-color: transparent;
 }
 .input_margin{
     margin-bottom: 30px;

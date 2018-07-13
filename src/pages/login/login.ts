@@ -32,6 +32,7 @@ export class LoginPage {
       (data) => {
         console.log(data);
         if(data[0]["Result"] == "True"){
+          this.UNotesService.IdEst = data[0]["Id"];
           this.navCtrl.setRoot(PeriodosPage,{Id:data[0]["Id"],Nombre:data[0]["Nombre"]});
         }else{
           this.Utilidades.mostrarAlerta('Error',data[0]["Msn"]);

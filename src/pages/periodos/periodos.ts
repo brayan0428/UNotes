@@ -15,15 +15,16 @@ export class PeriodosPage {
               public UNotesService: UnotesServiceProvider,
               public Utilidades:UnotesUtilidadesProvider) {
     this.Parametros = navParams.data;
+    console.log(this.UNotesService.IdEst);
     this.ConsultarPeriodos();
   }
 
   ConsultarPeriodos(){
-    this.UNotesService.ConsultarPeriodos(this.Parametros.Id)
+    this.UNotesService.ConsultarPeriodos(this.UNotesService.IdEst)
     .subscribe(
       (data) => {
         this.Periodos = data;
-        console.log(data);
+        //console.log(data);
       },
       (error) =>{
         console.error(error);

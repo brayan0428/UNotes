@@ -15,12 +15,13 @@ class Con{
 
 /*
     CREATE TABLE `usuarios` (
-        `Id` int(11) NOT NULL,
+        `Id` int(11) NOT NULL AUTO_INCREMENT,
         `Nombre` varchar(200) COLLATE utf8_spanish2_ci NOT NULL,
         `Email` varchar(150) COLLATE utf8_spanish2_ci NOT NULL,
         `Clave` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
         `FechaIng` date NOT NULL,
-        `Habilitado` tinyint(1) NOT NULL
+        `Habilitado` tinyint(1) NOT NULL,
+        PRIMARY KEY (`Id`)
         )
 
     CREATE TABLE IF NOT EXISTS `periodos` (

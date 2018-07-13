@@ -9,7 +9,11 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class UnotesServiceProvider {
-  UrlApi = 'http://localhost:8080/UNotes/UNotes.php?';
+  UrlApi:String = 'https://sistemacobros.000webhostapp.com/UNotes/UNotes.php?';
+  
+  //Variable Gobal para la Sesión
+  IdEst:String = '';
+
   constructor(public http: HttpClient) {
     
   }
