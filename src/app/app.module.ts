@@ -8,6 +8,7 @@ import { LoginPage } from '../pages/login/login';
 import { RegistroPage } from '../pages/registro/registro';
 import { PeriodosPage } from '../pages/periodos/periodos';
 import { MateriasPage } from '../pages/materias/materias';
+import {AgregarPeriodoPage} from '../pages/agregar-periodo/agregar-periodo';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,7 +21,8 @@ import { UnotesUtilidadesProvider } from '../providers/unotes-utilidades/unotes-
     LoginPage,
     RegistroPage,
     PeriodosPage,
-    MateriasPage
+    MateriasPage,
+    AgregarPeriodoPage
   ],
   imports: [
     HttpClientModule,
@@ -33,7 +35,8 @@ import { UnotesUtilidadesProvider } from '../providers/unotes-utilidades/unotes-
     LoginPage,
     RegistroPage,
     PeriodosPage,
-    MateriasPage
+    MateriasPage,
+    AgregarPeriodoPage
   ],
   providers: [
     StatusBar,

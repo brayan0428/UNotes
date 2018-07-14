@@ -1,0 +1,17 @@
+<div class="content-agregar-periodo">
+  <ion-content padding class="guide-modal">
+    <h3>Agregar Periodo</h3>
+    <ion-item>
+      <ion-label floating><ion-icon name="md-person" class="icon_login"></ion-icon>  Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating><ion-icon name="md-person" class="icon_login"></ion-icon>  Descripción</ion-label>
+        <ion-textarea type="text" [(ngModel)]="descripcion" rows="5"></ion-textarea>
+    </ion-item>
+    <div class="div_botones_agregar_periodo">
+        <button ion-button inline class="btn_login" (click) = "agregarProducto()">Guardar</button>
+        <button ion-button inline class="btn_login" color="danger" (click) = "cerrarModal()">Cancelar</button>
+    </div>
+  </ion-content>  
+</div>

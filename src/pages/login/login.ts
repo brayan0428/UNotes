@@ -10,8 +10,8 @@ import { RegistroPage } from '../registro/registro';
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  email:String = '';
-  clave:String = '';
+  email:String = 'brayan0428@gmail.com';
+  clave:String = '123';
   constructor(public navCtrl: NavController,
               public UNotesService: UnotesServiceProvider,
               public Utilidades:UnotesUtilidadesProvider) {

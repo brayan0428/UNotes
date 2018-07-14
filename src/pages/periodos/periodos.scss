@@ -1,3 +1,19 @@
+$colorCard: #B3E5FC;
 .float_action_periodos{
     margin-right: 15px;
+}
+h2.nombre_periodo{
+    margin: 0;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+}
+ion-card.card_periodos:nth-child(odd) {
+    background-color:$colorCard;
+}
+ion-card.card_periodos:nth-child(even) {
+    background-color:#FFECB3;
+}
+.p_card_periodos{
+    margin: 0;
 }

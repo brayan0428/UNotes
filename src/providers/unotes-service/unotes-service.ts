@@ -29,4 +29,8 @@ export class UnotesServiceProvider {
   ConsultarPeriodos(IdEst){
     return this.http.get(`${this.UrlApi}Peticion=Cons_Periodos&IdEst=${IdEst}`);
   }
+
+  IngresarProducto(IdEst,Nombre,Descripcion){ 
+    return this.http.get(`${this.UrlApi}Peticion=Insertar_Periodo&IdEst=${IdEst}&Nombre=${Nombre}&Descripcion=${Descripcion}`);
+  }
 }
