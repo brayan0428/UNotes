@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-materias',
-  templateUrl: 'materias.html'
+  templateUrl: 'materias.html',
 })
 export class MateriasPage {
-
-  constructor(public navCtrl: NavController) {
-
+  Parametros:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.Parametros = navParams.data
+    console.log(this.Parametros);
   }
-
 }
+

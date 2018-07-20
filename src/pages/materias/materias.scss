@@ -1,0 +1,89 @@
+$colorPrimary: #B3E5FC;
+page-materias {
+
+}
+
+.opciones{
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    background: $colorPrimary;
+}
+.parrafo_materias{
+    display: inline;
+    margin: 0;
+    line-height: 50px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.opciones_materias{
+    float: right;
+    margin: 0;
+}
+.icon_materias{
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 50px;
+    margin-right: 15px;
+}
+.izquierda{
+    background: $colorPrimary;
+    height: 140px;
+    margin-left: -20px;
+    margin-top: -30px;
+    width:2%; 
+}
+.derecha {
+    width: 20%     
+}
+ 
+.contenido {  	
+    width:75%;  
+ }
+ .izquierda {  	
+    float: left;  
+ }    
+ .derecha {  	
+    float: right;  
+ }
+ .contenido .nombre_materia{
+     font-size: 20px;
+     font-weight: bold;
+ }
+ .ul_notas{
+     margin: 0;
+     list-style: none;
+     margin-left: -40px;
+ }
+
+ .li_notas{
+     margin-right: 10px;
+     float: left;
+ }
+ .iconos_card_materias{
+     margin-right: 10px;
+ }
+ .necesitas{
+     margin-top: 20px;
+    line-height: 50px;
+     text-align: center;
+     display: inline-block;
+     width: 50px;
+     height: 50px;
+     background: #ccc;
+     border-radius: 50%;
+ }
+ .definitiva{
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    border-radius: 50%;
+}
+.derecha .parrafo_card_opciones{
+    margin-left: 3px;
+    font-size: 10px;
+    display: inline;
+}

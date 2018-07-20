@@ -4,6 +4,7 @@ import { UnotesServiceProvider } from '../../providers/unotes-service/unotes-ser
 import { UnotesUtilidadesProvider } from '../../providers/unotes-utilidades/unotes-utilidades';
 import { ModalController } from 'ionic-angular';
 import {AgregarPeriodoPage} from '../agregar-periodo/agregar-periodo';
+import { MateriasPage } from '../materias/materias';
 
 @Component({
   selector: 'page-periodos',
@@ -41,5 +42,9 @@ export class PeriodosPage {
       modal.onDidDismiss((data) => {
         this.ConsultarPeriodos();
       })
+    }
+
+    verMaterias(Id){
+      this.navCtrl.push(MateriasPage,{"Id":Id});
     }
 }

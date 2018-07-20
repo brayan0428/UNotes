@@ -8,13 +8,25 @@
   </ion-header>
   
   <ion-content>
-    <ion-card *ngFor="let i of Periodos" class="card_periodos">
+
+    <ion-card *ngFor="let i of Periodos" class="card_periodos" (click)="verMaterias(i.Id);">
       <ion-card-header>
         <h2 class="nombre_periodo">{{i.Nombre}}</h2>
       </ion-card-header>
       <ion-card-content>
-          <p class="p_card_periodos">{{i.Descripcion}}</p>
-          <p class="p_card_periodos">{{i.CantMaterias}} Materias</p>
+          <!--<p class="p_card_periodos">{{i.Descripcion}}</p>
+          <p class="p_card_periodos">{{i.CantMaterias}} Materias</p>-->
+          <ion-grid>
+              <ion-row>
+                <ion-col col-10>
+                    <p class="p_card_periodos">{{i.Descripcion}}</p>
+                    <p class="p_card_periodos">{{i.CantMaterias}} Materias</p>
+                </ion-col>
+                <ion-col col-2>
+                  x
+                </ion-col>
+              </ion-row>
+            </ion-grid>
       </ion-card-content>
     </ion-card>
     <ion-fab bottom right class="float_action_periodos">
