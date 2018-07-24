@@ -14,6 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { UnotesServiceProvider } from '../providers/unotes-service/unotes-service';
 import { UnotesUtilidadesProvider } from '../providers/unotes-utilidades/unotes-utilidades';
+import { AgregarMateriaPage } from '../pages/agregar-materia/agregar-materia';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UnotesUtilidadesProvider } from '../providers/unotes-utilidades/unotes-
     RegistroPage,
     PeriodosPage,
     MateriasPage,
-    AgregarPeriodoPage
+    AgregarPeriodoPage,
+    AgregarMateriaPage
   ],
   imports: [
     HttpClientModule,
@@ -36,7 +38,8 @@ import { UnotesUtilidadesProvider } from '../providers/unotes-utilidades/unotes-
     RegistroPage,
     PeriodosPage,
     MateriasPage,
-    AgregarPeriodoPage
+    AgregarPeriodoPage,
+    AgregarMateriaPage
   ],
   providers: [
     StatusBar,

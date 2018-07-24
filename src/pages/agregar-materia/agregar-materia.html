@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Agregar Materia</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating><ion-icon name="md-person" class="icon_login"></ion-icon>  Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label floating><ion-icon name="md-person" class="icon_login"></ion-icon>  Profesor</ion-label>
+      <ion-input type="text" [(ngModel)]="profesor"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating><ion-icon name="md-school" class="icon_login"></ion-icon>  Salón</ion-label>
+    <ion-input type="text" [(ngModel)]="salon"></ion-input>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating><ion-icon name="md-school" class="icon_login"></ion-icon>  Nota 1</ion-label>
+          <ion-input type="number" [(ngModel)]="nota1"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Porcentaje</ion-label>
+            <ion-select [(ngModel)]="porcentaje1">
+              <ion-option value="10">10%</ion-option>
+              <ion-option value="20">20%</ion-option>
+              <ion-option value="30">30%</ion-option>
+              <ion-option value="40">40%</ion-option>
+              <ion-option value="50">50%</ion-option>
+              <ion-option value="60">60%</ion-option>
+              <ion-option value="70">70%</ion-option>
+              <ion-option value="80">80%</ion-option>
+              <ion-option value="90">90%</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating><ion-icon name="md-school" class="icon_login"></ion-icon>  Nota 2</ion-label>
+          <ion-input type="number" [(ngModel)]="nota1"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Porcentaje</ion-label>
+            <ion-select [(ngModel)]="porcentaje2">
+              <ion-option value="10">10%</ion-option>
+              <ion-option value="20">20%</ion-option>
+              <ion-option value="30">30%</ion-option>
+              <ion-option value="40">40%</ion-option>
+              <ion-option value="50">50%</ion-option>
+              <ion-option value="60">60%</ion-option>
+              <ion-option value="70">70%</ion-option>
+              <ion-option value="80">80%</ion-option>
+              <ion-option value="90">90%</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating><ion-icon name="md-school" class="icon_login"></ion-icon>  Nota 3</ion-label>
+          <ion-input type="number" [(ngModel)]="nota3"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Porcentaje</ion-label>
+            <ion-select [(ngModel)]="porcentaje3">
+              <ion-option value="10">10%</ion-option>
+              <ion-option value="20">20%</ion-option>
+              <ion-option value="30">30%</ion-option>
+              <ion-option value="40">40%</ion-option>
+              <ion-option value="50">50%</ion-option>
+              <ion-option value="60">60%</ion-option>
+              <ion-option value="70">70%</ion-option>
+              <ion-option value="80">80%</ion-option>
+              <ion-option value="90">90%</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
