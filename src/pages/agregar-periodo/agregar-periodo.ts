@@ -32,7 +32,7 @@ export class AgregarPeriodoPage {
     this.UNotesService.IngresarProducto(this.UNotesService.IdEst,this.nombre.trim(),this.descripcion.trim())
     .subscribe(
       (data) => {
-        console.log(data);
+        //console.log(data);
         if(data[0]["Result"] == "True"){
           this.Utilidades.mostrarAlerta('Confirmación',data[0]["Msn"]);
           this.cerrarModal();

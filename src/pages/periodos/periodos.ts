@@ -19,7 +19,7 @@ export class PeriodosPage {
               public Utilidades:UnotesUtilidadesProvider,
               public modal: ModalController) {
     this.Parametros = navParams.data;
-    console.log(this.UNotesService.IdEst);
+    //console.log(this.UNotesService.IdEst);
     this.ConsultarPeriodos();
   }
 
@@ -46,5 +46,9 @@ export class PeriodosPage {
 
     verMaterias(Id){
       this.navCtrl.push(MateriasPage,{"Id":Id});
+    }
+
+    ionViewDidEnter(){
+      this.ConsultarPeriodos();
     }
 }

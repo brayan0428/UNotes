@@ -49,7 +49,7 @@
       <ion-col>
         <ion-item>
           <ion-label floating><ion-icon name="md-school" class="icon_login"></ion-icon>  Nota 2</ion-label>
-          <ion-input type="number" [(ngModel)]="nota1"></ion-input>
+          <ion-input type="number" [(ngModel)]="nota2"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col>
@@ -98,4 +98,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+  <button ion-button block (click) = "guardarMateria()" *ngIf="Acc">Guardar Materia</button>
+  <button ion-button block (click) = "actualizarMateria()" *ngIf="!Acc">Actualizar Materia</button>
+  <button ion-button block color="danger" (click) = "eliminarMateria()" *ngIf="!Acc">Eliminar Materia</button>
 </ion-content>

@@ -55,7 +55,7 @@ export class RegistroPage {
           this.UNotesService.RegistrarUsuario(this.nombre.trim(),this.email.trim(),this.clave.trim())
           .subscribe(
             (data) => {
-              console.log(data);
+              //console.log(data);
               if(data[0]["Result"] == "True"){
                 this.Utilidades.mostrarAlerta('Confirmación','Usuario Creado Exitosamente');
                 this.navCtrl.setRoot(LoginPage);

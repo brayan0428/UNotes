@@ -30,7 +30,7 @@ export class LoginPage {
     this.UNotesService.ValidarUsuario(this.email.trim(),this.clave.trim())
     .subscribe(
       (data) => {
-        console.log(data);
+        //console.log(data);
         if(data[0]["Result"] == "True"){
           this.UNotesService.IdEst = data[0]["Id"];
           this.navCtrl.setRoot(PeriodosPage,{Id:data[0]["Id"],Nombre:data[0]["Nombre"]});
